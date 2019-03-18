@@ -25,12 +25,7 @@
         "command": "extension.runScript",
         "title": "runScript"
       }
-    ],
-    "menus": {
-      "editor/title": [{
-        "group": "navigation"
-      }]
-    }
+    ]
   },
   "scripts": {
     "postinstall": "node ./node_modules/vscode/bin/install",
