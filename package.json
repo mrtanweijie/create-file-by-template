@@ -1,0 +1,50 @@
+{
+  "name": "create-file-by-template",
+  "displayName": "create-file-by-template",
+  "description": "",
+  "version": "0.0.1",
+  "publisher": "twj",
+  "engines": {
+    "vscode": "^1.32.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.createTemplate",
+    "onCommand:extension.runScript"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.createTemplate",
+        "title": "createTemplate"
+      },
+      {
+        "command": "extension.runScript",
+        "title": "runScript"
+      }
+    ],
+    "menus": {
+      "editor/title": [{
+        "group": "navigation"
+      }]
+    }
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.42",
+    "@types/node": "^10.12.21",
+    "chalk": "^2.4.2",
+    "eslint": "^5.13.0",
+    "fs": "0.0.1-security",
+    "fs-extra": "^7.0.1",
+    "path": "^0.12.7",
+    "typescript": "^3.3.1",
+    "vscode": "^1.1.28"
+  }
+}
